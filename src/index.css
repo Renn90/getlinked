@@ -6,19 +6,26 @@
 body{
   font-family: 'Montserrat', sans-serif;
   background-color: #150E28;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 .gradient{
   background: linear-gradient(to right, #D434FE 65%, #903AFF);
 }
 .border-custom{
-  border-color: linear-gradient(to right, #D434FE 65%, #903AFF);;
+  border-width: 1px;
+  border-image: linear-gradient(to right, #D434FE 65%, #903AFF);
+  border-image-slice: 1;
+  border-style: solid;
+  border-radius: 50%!important;
 }
 
 .hamburger{
   display: flex;
   position: relative;
   flex-direction: column;
-  width: 25px;
+  width: 20px;
 }
 .hamburger span{
   position: absolute;
@@ -41,19 +48,27 @@ body{
 .nav{
   overflow: hidden;
 }
-.drop-down{
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 370px;
-  background-color: red;
-  width: 100%!important;
-  padding: 40px;
-  justify-content: center;
-  border-radius: 0 0 10px 10px;
+@media(max-width: 768px){
+  .drop-down{
+    max-height: 0px;
+    display: flex!important;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 40px;
+    background-color: #150E28;
+    width: 100%!important;
+    justify-content: center!important;
+    align-items: start!important;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+  }
+  .drop-down li{
+    margin-bottom: 20px;
+  }
 }
-.drop-downd li{
-  margin-bottom: 20px;
+.scroll-down{
+  max-height: 370px!important;
+  transition: max-height .8s ease-out;
 }
