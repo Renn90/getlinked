@@ -8,6 +8,8 @@ import QandA from '../components/QandA'
 import Timeline from '../components/Timeline'
 import PriceSec from '../components/PriceSec'
 import Partners from '../components/Partners'
+import PrivacyPolicy from '../components/PrivacyPolicy'
+import Footer from '../components/Footer'
 
 const HomePage = () => {
   return (
@@ -21,6 +23,8 @@ const HomePage = () => {
       <Timeline />
       <PriceSec />
       <Partners />
+     <PrivacyPolicy />
+     <Footer />
     </>
   )
 }
