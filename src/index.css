@@ -9,6 +9,13 @@ body{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+.text-clash{
+  font-family: 'Clash Display', sans-serif!important;
+}
+.unicaOne{
+  font-family: 'Unica One', cursive;
 }
 .gradient{
   background: linear-gradient(to right, #D434FE 65%, #903AFF);
