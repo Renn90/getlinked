@@ -14,7 +14,7 @@ const Rules = () => {
         alt="/"
         className="absolute top-[5%] left-[5%] w-[100%] opacity-50 md:top-[-20%] md:w-[50%]"
       />
-      <div className="container overflow-hidden relative mx-auto flex flex-col justify-between items-center py-20 text-white md:flex-row-reverse">
+      <div className="container overflow-hidden relative mx-auto flex flex-col justify-between items-center py-[20px] text-white md:flex-row-reverse">
         <div className="w-1/2 relative w-[100%] flex items-center md:items-start">
           <img
             src={illustration}
@@ -39,7 +39,7 @@ const Rules = () => {
       <img
         src={flare}
         alt="/"
-        className="absolute bottom-[-10%] right-[-35%] w-[100%] opacity-50 md:w-[50%]"
+        className="absolute bottom-[-10%] right-[-35%] w-[100%] opacity-50 md:w-[50%] overflow-hidden"
       />
       <Hr />
     </section>

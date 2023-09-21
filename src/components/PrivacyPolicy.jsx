@@ -11,7 +11,7 @@ import flare from "../assets/Purple-Lens-Flare.png";
 const PrivacyPolicy = () => {
   return (
     <section className="relative">
-    <div className="text-white container mx-auto flex flex-col justify-between items-center md:flex-row">
+    <div className="text-white container mx-auto flex flex-col justify-between py-[30px] my-8 items-center md:flex-row">
       <div className=" md:w-1/2 relative">
         <Header head={"Privacy Policy and"} purpleTxt={"Terms"} />
         <p className="text-sm text-[lightGrey]">

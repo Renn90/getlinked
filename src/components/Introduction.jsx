@@ -8,7 +8,7 @@ import Header from "./UI/Header";
 const Introduction = () => {
   return (
     <>
-    <section className="container relative mx-auto flex flex-col justify-between items-center text-white py-[60px] md:flex-row">
+    <section className="container relative mx-auto flex flex-col justify-between items-center text-white py-[30px] md:flex-row">
       <div className="w-1/2 relative w-[100%] flex items-center md:items-start">
         <img src={illustration} alt="illustration" className="w-[400px]"/>
         <img src={arrow} alt="arrow" className="absolute bottom-[-30px] right-[40%] md:bottom-[10px] md:right-[20%]"/>

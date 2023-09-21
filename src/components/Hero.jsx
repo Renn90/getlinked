@@ -14,6 +14,7 @@ import Hr from "./UI/Hr";
 const Hero = () => {
   const num = "text-4xl unicaOne mr-3";
   const smText = "text-xs";
+  
   return (
     <>
       <header className="container mx-auto flex flex-col mt-8 md:mt-4">

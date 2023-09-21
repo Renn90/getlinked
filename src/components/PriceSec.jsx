@@ -9,7 +9,7 @@ import flare from "../assets/Purple-Lens-Flare.png";
 const PriceSec = () => {
   return (
     <section className="relative">
-    <div className="container mx-auto text-white flex flex-col py-2">
+    <div className="container mx-auto text-white flex flex-col py-[30px] md:mt-4">
       <div className="self-end text-center md:text-start">
         <Header head={"Prizes and"} purpleTxt={"Rewards"} />
         <p className="text-sm">

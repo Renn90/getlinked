@@ -6,7 +6,7 @@ import TimelineItem from "./UI/TimelineItem";
 
 const Timeline = () => {
   return (
-    <section className="container relative mx-auto text-white py-[60px]">
+    <section className="container relative mx-auto text-white py-[30px]">
       <span className="text-center mx-auto">
         <Header head={"Timeline"} />
         <p className="text-sm pb-8">
