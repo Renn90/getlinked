@@ -9,6 +9,7 @@ import flare from "../assets/Purple-Lens-Flare.png";
 import flare2 from "../assets/Purple-Lens-Flare2.png";
 import metrix from "../assets/metrix.png";
 import star from "../assets/star.png";
+import Hr from "./UI/Hr";
 
 const Hero = () => {
   const num = "text-4xl unicaOne mr-3";
@@ -83,7 +84,7 @@ const Hero = () => {
           </div>
         </div>
       </header>
-      <hr className="border-[#d4d4d430]"/>
+    <Hr />
     </>
   );
 };

@@ -67,7 +67,7 @@ body{
     background-color: #150E28;
     width: 100%!important;
     justify-content: center!important;
-    align-items: start!important;
+    align-items: flex-start!important;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
   }
@@ -78,4 +78,14 @@ body{
 .scroll-down{
   max-height: 370px!important;
   transition: max-height .8s ease-out;
+}
+.slide-down{
+  overflow: hidden;
+  transition: max-height .8s ease-out;
+  max-height: 200px;
+}
+.slide-up{
+  overflow: hidden;
+  transition: max-height .3s ease-out;
+  max-height: 0px;
 }
