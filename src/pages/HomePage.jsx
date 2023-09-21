@@ -6,6 +6,8 @@ import Rules from '../components/Rules'
 import Criteria from '../components/Criteria'
 import QandA from '../components/QandA'
 import Timeline from '../components/Timeline'
+import PriceSec from '../components/PriceSec'
+import Partners from '../components/Partners'
 
 const HomePage = () => {
   return (
@@ -17,6 +19,8 @@ const HomePage = () => {
       <Criteria />
       <QandA />
       <Timeline />
+      <PriceSec />
+      <Partners />
     </>
   )
 }
