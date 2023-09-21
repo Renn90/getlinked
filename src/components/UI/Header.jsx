@@ -7,6 +7,6 @@ const Header = ({head, purpleTxt}) => {
       <span className="text-secondary-2">{purpleTxt}</span>
     </h2>
   );
-};
+}; 
 
 export default Header;
