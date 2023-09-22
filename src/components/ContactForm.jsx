@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "../components/UI/Button";
 
 const ContactForm = () => {
   const [firstName, setFirstName] = useState("");
@@ -97,7 +96,7 @@ const ContactForm = () => {
       <p className="text-sm text-[red] py-1">{error && 'Error, please check fields and try again'}</p>
       <p className="text-sm text-[#2DE100] py-1">{success && 'Message sent Successfully!!'}</p>
       <span className="self-center my-2 relative" onClick={sendDetails}>
-      <button disabled={loading || !validInfo ? true : false} className="spin-cont relative gradient py-2 px-8 rounded text-sm disabled:opacity-10 cursor-none">
+      <button disabled={loading || !validInfo ? true : false} className="spin-cont relative gradient py-2 px-8 rounded text-sm disabled:opacity-10 disabled:cursor-none">
       {loading && <span className="spinner"></span>}
          Submit
       </button>
