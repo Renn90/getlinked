@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import remove from '../assets/remove.svg'
 import Button from "./UI/Button";
-import Hr from "./UI/Hr";
 
 const NavBar = () => {
   const [open, setOpen] = useState(null)
@@ -36,7 +35,6 @@ const NavBar = () => {
            <img src={remove} alt="x" className="z-[999] cursor-pointer" onClick={()=>setOpen(false)}/>
         }
       </div>
-      <Hr />
     </nav>
   );
 };

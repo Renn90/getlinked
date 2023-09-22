@@ -4,6 +4,7 @@ import { RouterProvider } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import MainLayout from './pages/MainLayout';
+import Register from './pages/Register';
 
 function App() {
   
@@ -11,6 +12,7 @@ function App() {
     {path: '/', element: <MainLayout />, children: ([
       { index: true, element: <HomePage /> },
       { path: 'contact', element: <ContactPage /> },
+      { path: 'register', element: <Register /> },
     ])},
   ])
  

@@ -18,6 +18,7 @@ const Hero = () => {
   return (
     <>
       <header className="container mx-auto flex flex-col mt-8 md:mt-4">
+      <Hr />
         <span className="flex flex-col text-white self-end">
           <i className="font-bold md:text-xl">
             Igniting a Revolution in HR Innovation

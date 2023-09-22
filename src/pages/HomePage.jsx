@@ -1,5 +1,4 @@
 import React from 'react'
-import NavBar from '../components/NavBar'
 import Hero from '../components/Hero'
 import Introduction from '../components/Introduction'
 import Rules from '../components/Rules'
@@ -14,7 +13,6 @@ import Footer from '../components/Footer'
 const HomePage = () => {
   return (
     <>
-      <NavBar />
       <Hero />
       <Introduction />
       <Rules />
