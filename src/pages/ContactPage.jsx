@@ -9,9 +9,6 @@ import Header from "../components/UI/Header";
 import PageFlaire from "../components/UI/PageFlaire";
 
 const ContactPage = () => {
-  useEffect(() => {
-    document.documentElement.style.overflowX = "hidden";
-  }, []);
 
   return (
     <>

@@ -8,11 +8,11 @@ const RegisterForm = () => {
 
   return (
     <form className='z-[999] text-white flex flex-col justify-between items-center md:bg-white/5 md:backdrop-blur-md md:p-10 md:items-start'>
-        <span className='absolute top-0 left-4 md:relative'>
+        <span className='absolute top-0 left-4 md:left-0 md:relative'>
         <Header purpleTxt={"Register"} />
         </span>
         <p className='text-xs my-2'>Be part of this movement!</p>
-        <h1 className='text-l md:text-xl'>CREATE YOUR ACCOUNT</h1>
+        <h1 className='text-l my-2 md:text-xl'>CREATE YOUR ACCOUNT</h1>
         <div className={flex}>
           <span className={labelForm}>
             <label>Teams Name</label>

@@ -22,7 +22,7 @@ const NavBar = () => {
           <li className="text-[#D4D4D4] hover:text-white">Overview</li>
           <li className="text-[#D4D4D4] hover:text-white">FAQs</li>
           <li className="text-[#D4D4D4] hover:text-white">Contact</li>
-          <li className="w-0 text-right md:w-2/6">
+          <li className="w-0 text-right pb-5 md:pb-0 md:w-2/6">
            <Button cta='Register'/>
           </li>
 
