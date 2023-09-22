@@ -7,7 +7,7 @@ const RegisterForm = () => {
     const input = "bg-white/5 p-2 my-2 w-[97%] text-xs bg-transparent outline-0 border border-1 rounded"
 
   return (
-    <form className='z-[999] text-white flex flex-col justify-between items-center md:bg-white/5 md:backdrop-blur-md md:p-10 md:items-start'>
+    <form className='z-[998] text-white flex flex-col justify-between items-center md:bg-white/5 md:backdrop-blur-md md:p-10 md:items-start'>
         <span className='absolute top-0 left-4 md:left-0 md:relative'>
         <Header purpleTxt={"Register"} />
         </span>
@@ -37,29 +37,29 @@ const RegisterForm = () => {
         <span className={labelForm}>
             <label>Cartegory</label>
             <select  className={input}>
-              <option value="">Select a Category</option>
-              <option value="Innovation">
+              <option value="" className='bg-primary'>Select a Category</option>
+              <option value="Innovation" className='bg-primary'>
                 Innovation
               </option>
-              <option value="AI and Machine Learning">
+              <option value="AI and Machine Learning" className='bg-primary'>
                 AI and Machine Learning
               </option>
-              <option value="Blockchain and Cryptocurrency">
-                Blockchain and Cryptocurrency
+              <option value="Blockchain and Cryptocurrency" className='bg-primary'>
+                Web3 and Blockchain
               </option>
             </select>
           </span>
           <span className={labelForm}>
             <label>Group size</label>
             <select  className={input}>
-              <option value="">Select a Category</option>
-              <option value="2">
+              <option value="" className='bg-primary'>Select a Category</option>
+              <option value="2" className='bg-primary'>
                 2
               </option>
-              <option value='3'>
+              <option value='3' className='bg-primary'>
                 3
               </option>
-              <option value="4">
+              <option value="4" className='bg-primary'>
                4
               </option>
             </select>

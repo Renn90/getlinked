@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import { BsInstagram } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoFacebook } from "react-icons/bi";
@@ -13,7 +14,7 @@ const ContactPage = () => {
   return (
     <>
       <div className="container relative mx-auto flex flex-col justify-center items-center text-white md:h-[85vh] z-[99] md:flex-row">
-      <IoIosArrowBack size={25} className="self-start rounded-full border-2 border-secondary-1 p-[3px] my-4 md:hidden"/>
+      <Link to='/' className="self-start "><IoIosArrowBack size={25} className="rounded-full border-2 border-secondary-1 p-[3px] my-4 md:hidden"/></Link>
         <div className="text-sm w-[100%] hidden md:w-1/2 md:block">
           <Header purpleTxt={"Get in touch"} />
           <p className="my-3">

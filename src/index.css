@@ -2,15 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
 html{
   overflow-x: hidden;
 }
 body{
   font-family: 'Montserrat', sans-serif;
   background-color: #150E28;
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
   position: relative;
@@ -24,6 +27,18 @@ body{
 }
 .gradient{
   background: linear-gradient(to right, #D434FE 65%, #903AFF);
+}
+.gradient-border{
+  border: 2px solid;
+  background: transparent;
+  border-image: linear-gradient(to bottom, #903AFF, #D434FE);
+  border-image-slice: 1;
+}
+.text-gradient{
+  background: linear-gradient(to right, #D434FE, #903AFF);
+  -webkit-background-clip: text;
+  color: transparent!important;
+  font-weight: bold;
 }
 .border-custom{
   border-width: 1px;
@@ -75,6 +90,7 @@ body{
     align-items: flex-start!important;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
+    transition: max-height .8s ease-out;
   }
   .drop-down li{
     margin-bottom: 20px;
@@ -84,6 +100,11 @@ body{
   max-height: 370px!important;
   transition: max-height .8s ease-out;
 }
+.scroll-up{
+  max-height: 0px!important;
+  transition: max-height .8s ease-out;
+}
+
 .slide-down{
   overflow: hidden;
   transition: max-height .8s ease-out;
