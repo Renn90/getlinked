@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Header from "./UI/Header";
 import question from '../assets/question.png'
-import purple from '../assets/purple star.png'
 import Hr from "./UI/Hr";
+import TwinkleStar from "./UI/TwinkleStar";
 
 const QandA = () => {
   const [display, setDisplay] = useState(null);
@@ -17,7 +17,7 @@ const QandA = () => {
   return (
     <>
     <section className="container relative mx-auto text-white flex flex-col items-center justify-between py-[30px] w-[100%] md:flex-row">
-      <img src={purple} alt="star" className="absolute top-[5%] left-[0%] w-[15px] md:top-[5%]"/>
+      <TwinkleStar purple={true} top={'5%'} left={'0%'} width={'15px'} mdTop={'5%'}/>
       <div className="w-[100%] md:w-1/2">
         <span className="text-center md:text-start">
         <Header head={"Frequently Asked"} purpleTxt={"Questions"} />
@@ -93,8 +93,12 @@ const QandA = () => {
         </div>
         
       </div>
-      <div className="w-[100%] flex justify-end md:w-1/2">
+      <div className="w-[100%] flex justify-end md:w-1/2 relative">
         <img src={question} alt="question" className="my-6 md:my-0 md:w-[90%] md:block"/>
+        <TwinkleStar purple={true} top={'10%'} left={'45%'} width={'15px'} />
+        <TwinkleStar purple={true} bottom={'30%'} left={'10%'} width={'15px'} />
+        <TwinkleStar bottom={'50%'} left={'20%'} width={'15px'} />
+        <TwinkleStar bottom={'5%'} right={'0%'} width={'15px'} />
       </div>
     </section>
     <Hr />

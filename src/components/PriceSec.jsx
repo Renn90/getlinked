@@ -2,9 +2,8 @@ import React from "react";
 import Header from "./UI/Header";
 import illustration from '../assets/priceillustration.png'
 import rewards from '../assets/Rewards.png'
-import star from "../assets/star.png";
-import purple from '../assets/purple star.png'
 import flare from "../assets/Purple-Lens-Flare.png";
+import TwinkleStar from "./UI/TwinkleStar";
 
 const PriceSec = () => {
   return (
@@ -19,14 +18,14 @@ const PriceSec = () => {
       <div className="flex flex-col justify-between items-center w-[100%] pt-12 md:flex-row">
         <span className="flex justify-center relative md:justify-start">
         <img src={illustration} alt="price"className="w-[85%] z-[99]"/>
-        <img src={purple} alt="star" className="absolute left-[45%] top-[20px] w-[15px] md:top-[-10%] md:left-[15%]"/>
-        <img src={star} alt="star" className="absolute right-[0%] w-[15px] md:bottom-[0%] md:left-[10%]"/>
+        <TwinkleStar purple={true} top={'20%'} left={'45%'} width={'15px'} mdTop={'-10%'} mdLft={'15%'}/>
+        <TwinkleStar right={'0%'} width={'15px'} mdBtm={'0%'} mdLft={'10%'}/>
         </span>
         <span className="flex justify-center relative md:justify-end">
         <img src={rewards} alt="rewards" className="mt-[51px] w-[85%] md:mt-0 z-[99]"/>
-        <img src={star} alt="star" className="absolute bottom-[0%] right-[10%] w-[15px] opacity-20 md:bottom-[-5%] md:right-[15%]"/>
-        <img src={star} alt="star" className="absolute top-[0%] left-[10%] w-[15px] md:top-[10%] md:left-[10%]"/>
-        <img src={star} alt="star" className="absolute top-[20%] right-[0%] w-[15px] md:right-[0%]"/>
+        <TwinkleStar bottom={'0%'} right={'10%'} width={'15px'} mdBtm={'-5%'} mdRight={'15%'}/>
+        <TwinkleStar top={'0%'} left={'10%'} width={'15px'} mdTop={'10%'} mdLft={'10%'}/>
+        <TwinkleStar top={'20%'} right={'0%'} width={'15px'} mdRight={'0%'} />
         </span>
       </div>
     </div>

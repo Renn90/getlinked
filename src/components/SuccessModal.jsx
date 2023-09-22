@@ -10,7 +10,6 @@ const SuccessModal = () => {
         <img src={illustration} alt="success" className="w-[300px]" />
         <h1 className="font-extrabold text-center">Congratulations you have successfully Registered!</h1>
         <p className="text-xs w-[70%] my-4 text-center">
-          <TwinkleStar />
           Yes, it was easy and you did it! check your mail box for next step
         </p>
         <Link to='/'>

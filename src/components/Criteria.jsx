@@ -1,11 +1,10 @@
 import React from "react";
 import Header from "./UI/Header";
-import purple from '../assets/purple star.png'
 import illustration from "../assets/criteriaSec.png";
 import flare from "../assets/Purple-Lens-Flare.png";
-import star from "../assets/star.png";
 import Button from "./UI/Button";
 import Hr from "./UI/Hr";
+import TwinkleStar from "./UI/TwinkleStar";
 
 const Criteria = () => {
   return (
@@ -17,9 +16,9 @@ const Criteria = () => {
       />
     <div className="container overflow-hidden relative mx-auto flex flex-col items-center text-white py-[60px] md:flex-row">
       <div className="w-[100%] md:w-1/2">
-        <img src={purple} alt="star" className="absolute left-[45%] top-[20px] md:top-[10%] md:left-[15%]"/>
+        <TwinkleStar purple={true} top={'20px'} left={'45%'} mdTop={'10%'} mdLft={'15%'} />
         <img src={illustration} alt="/" />
-        <img src={star} alt="star" className="absolute bottom-[5%] right-[20%] w-[15px] md:bottom-[10%] md:right-[60%]"/>
+        <TwinkleStar bottom={'5%'} right={'20%'} width={'15px'} mdBtm={'10%'} mdRight={'60%'}/>
       </div>
       <div className="w-[100%] md:w-1/2">
         <Header head={"Judging Criteria"} purpleTxt={"Key attributes"} />

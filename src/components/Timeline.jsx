@@ -1,8 +1,7 @@
 import React from "react";
 import Header from "./UI/Header";
-import purple from "../assets/purple star.png";
-import star from "../assets/star.png";
 import TimelineItem from "./UI/TimelineItem";
+import TwinkleStar from "./UI/TwinkleStar";
 
 const Timeline = () => {
   return (
@@ -65,21 +64,9 @@ const Timeline = () => {
         no="6"
         reverse={true}
       />
-      <img
-        src={purple}
-        alt="star"
-        className="absolute top-[5%] left-[10%] w-[15px] sm:top-[10%]"
-      />
-      <img
-        src={star}
-        alt="star"
-        className="absolute bottom-[5%] left-[10%] w-[15px] opacity-20 sm:bottom-[10%]"
-      />
-      <img
-        src={star}
-        alt="star"
-        className="absolute bottom-[50%] right-[10%] w-[15px]"
-      />
+      <TwinkleStar purple={true} top={'5%'} left={'10%'} width={'15px'}/>
+        <TwinkleStar bottom={'5%'} left={'10%'} width={'15px'} mdBtm={'10%'}/>
+      <TwinkleStar bottom={'50%'} right={'10%'} width={'15px'} />
     </section>
   );
 };

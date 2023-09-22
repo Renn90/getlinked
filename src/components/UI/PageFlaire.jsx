@@ -2,31 +2,16 @@ import React from 'react'
 import purple from "../../assets/purple star.png";
 import star from "../../assets/star.png";
 import flare from "../../assets/Purple-Lens-Flare.png";
+import TwinkleStar from './TwinkleStar';
 
 const PageFlaire = () => {
   return (
     <>
       {/*stars*/}
-      <img
-        src={purple}
-        alt="star"
-        className="absolute top-[20%] md:top-[20%] md:left-[15%] w-[15px]"
-      />
-      <img
-        src={star}
-        alt="star"
-        className="absolute right-[15%] top-[20%] md:top-[20%] md:left-[80%] w-[16px] opacity-20"
-      />
-      <img
-        src={star}
-        alt="star"
-        className="absolute right-[15%] bottom-[20%] md:top-[90%] md:left-[80%] w-[16px] z-[9]"
-      />
-      <img
-        src={purple}
-        alt="star"
-        className="absolute bottom-[15%] left-[20%] w-[15px] md:bottom-[20%] md:left-[50%]"
-      />
+      <TwinkleStar purple={true} top={'20%'} mdLft={'15%'} mdTop={'20%'} width={'15px'}/>
+      <TwinkleStar right={'15%'} top={'20%'} mdTop={'20%'} mdLft={'80%'} width={'16px'}/>
+      <TwinkleStar right={'15%'} bottom={'20%'} mdTop={'90%'} mdLft={'80%'} width={'16px'}/>
+      <TwinkleStar purple={true} bottom={'15%'} left={'20%'} width={'15px'} mdBtm={'20%'} mdLft={'50%'} />
 
 
        {/* purple flare */}

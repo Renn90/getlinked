@@ -8,8 +8,8 @@ import idea from "../assets/idea.svg";
 import flare from "../assets/Purple-Lens-Flare.png";
 import flare2 from "../assets/Purple-Lens-Flare2.png";
 import metrix from "../assets/metrix.png";
-import star from "../assets/star.png";
 import Hr from "./UI/Hr";
+import TwinkleStar from "./UI/TwinkleStar";
 
 const Hero = () => {
   const num = "text-4xl unicaOne mr-3";
@@ -29,17 +29,9 @@ const Hero = () => {
           />
         </span>
         <div className="flex flex-col justify-between items-center text-center text-white mt-[80px] md:text-start md:flex-row md:mt-0">
-          <img src={star} alt="star" className="absolute top-[20%] left-10 w-[20px] md:left-[12%]" />
-          <img
-            src={star}
-            alt="star"
-            className="absolute top-[30%] left-[40%] opacity-10 w-[20px]"
-          />
-          <img
-            src={star}
-            alt="star"
-            className="absolute bottom-[20%] left-[30%] opacity-10 w-[20px]"
-          />
+          <TwinkleStar top={'20%'} left={'10%'} width={'10px'} mdLft={'12%'} />
+          <TwinkleStar top={'30%'} left={'40%'} width={'15px'} />
+          <TwinkleStar bottom={'20%'} left={'30%'} width={'15px'} />
           <div style={{ lineHeight: "80px" }} className="flex flex-col items-center md:items-start">
             <img
               src={flare}

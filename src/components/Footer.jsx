@@ -1,12 +1,11 @@
 import React from "react";
-import purple from "../assets/purple star.png";
-import star from "../assets/star.png";
 import { BsInstagram } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { BiLogoFacebook } from "react-icons/bi";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { BiSolidPhoneCall } from "react-icons/bi";
+import TwinkleStar from "./UI/TwinkleStar";
 
 const Footer = () => {
   return (
@@ -31,16 +30,8 @@ const Footer = () => {
               <h3 className="cursor-pointer">Privacy Policy</h3>
             </span>
             {/* random stars*/}
-            <img
-          src={purple}
-          alt="star"
-          className="absolute bottom-[10%] right-[10%] w-[17px]"
-        />
-            <img
-          src={star}
-          alt="star"
-          className="absolute w-[15px] top-[0%] left-[-10%]"
-        />
+        <TwinkleStar purple={true} bottom={'10%'} right={'10%'} width={'17px'} />
+        <TwinkleStar top={'0%'} left={'-10%'} width={'15px'} />
           </div>
           <div className="text-sm flex flex-col justify-between mb-[39px] md:w-1/4 md:mb-0">
             <h2 className="text-secondary-2 font-bold">Useful Links</h2>
@@ -65,16 +56,8 @@ const Footer = () => {
               <FaLocationDot className="mr-2" />
               27,Alara Street Yaba 100012 Lagos State
             </span>
-            <img
-          src={star}
-          alt="star"
-          className="absolute w-[15px] top-[0%] left-[-10%]"
-        />
-         <img
-          src={star}
-          alt="star"
-          className="absolute w-[15px] bottom-[-5%] right-[10%] w-[12px]"
-        />
+         <TwinkleStar top={'0%'} left={'-10%'} width={'15px'} />
+         <TwinkleStar bottom={'-5%'} right={'10%'} width={'12px'} />
           </div>
         </div>
         <p className="text-center mt-[30px] text-xs">

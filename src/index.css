@@ -136,3 +136,7 @@ body{
     transform: rotate(360deg);
   }
 }
+
+.twinkle{
+  transition: opacity;
+}

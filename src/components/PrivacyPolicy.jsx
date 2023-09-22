@@ -4,9 +4,8 @@ import Header from "./UI/Header";
 import Button from "./UI/Button";
 import privacy from "../assets/privacy.png";
 import sheild from "../assets/sheild.png";
-import purple from "../assets/purple star.png";
-import star from "../assets/star.png";
 import flare from "../assets/Purple-Lens-Flare.png";
+import TwinkleStar from "./UI/TwinkleStar";
 
 const PrivacyPolicy = () => {
   return (
@@ -69,21 +68,9 @@ const PrivacyPolicy = () => {
           </span>
         </div>
         {/*random stars */}
-        <img
-          src={purple}
-          alt="star"
-          className="absolute top-[10%] right-[0%] w-[17px]"
-        />
-         <img
-          src={purple}
-          alt="star"
-          className="absolute bottom-[10%] left-[-10%] w-[17px]"
-        />
-            <img
-          src={star}
-          alt="star"
-          className="absolute w-[15px] top-[-5%] left-[0%] opacity-20"
-        />
+          <TwinkleStar purple={true} top={'10%'} right={'0%'} width={'17px'} />
+        <TwinkleStar purple={true} bottom={'10%'} left={'0%'} width={'17px'} mdLft={'-20%'} />
+         <TwinkleStar purple={true} top={'-5%'} left={'0%'} width={'15px'} />
 
                {/* purple flare */}
       <img
@@ -101,26 +88,10 @@ const PrivacyPolicy = () => {
           className="absolute top-[0%] right-20% w-[70%] md:right-0 md:top-[-10%]"
         />
         {/*random stars */}
-        <img
-          src={purple}
-          alt="star"
-          className="absolute bottom-[40%] left-[30%] w-[17px]"
-        />
-        <img
-          src={star}
-          alt="star"
-          className="absolute w-[15px] bottom-[10%] right-[0%] opacity-20"
-        />
-        <img
-          src={star}
-          alt="star"
-          className="absolute top-[5%] right-[20%] w-[15px]"
-        />
-        <img
-          src={star}
-          alt="star"
-          className="absolute bottom-[15%] left-[25%] w-[15px]"
-        />
+         <TwinkleStar purple={true} bottom={'40%'} left={'30%'} width={'17px'} />
+          <TwinkleStar  bottom={'0%'} right={'0%'} width={'15px'} />
+        <TwinkleStar top={'5%'} right={'20%'} width={'15px'} />
+         <TwinkleStar bottom={'15%'} left={'0%'} width={'15px'} />
       </div>
     </div>
     </section>

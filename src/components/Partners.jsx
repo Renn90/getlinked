@@ -5,6 +5,7 @@ import Hr from "./UI/Hr";
 import flare from "../assets/Purple-Lens-Flare.png";
 import purple from '../assets/purple star.png';
 import star from "../assets/star.png";
+import TwinkleStar from "./UI/TwinkleStar";
 
 const Partners = () => {
 
@@ -23,10 +24,10 @@ const Partners = () => {
       </div>
     </div>
     {/*stars*/}
-    <img src={purple} alt="star" className="absolute top-[20%] md:top-[20%] md:left-[15%] w-[15px]"/>
-    <img src={purple} alt="star" className="absolute left-[45%] top-[20px] md:top-[40%] md:left-[55%] w-[12px]"/>
-    <img src={star} alt="star" className="absolute bottom-[5%] right-[20%] w-[15px] md:bottom-[20%] md:left-[50%]"/>
-    
+    <TwinkleStar purple={true} top={'20%'} mdTop={'20%'} width={'15px'} mdLft={'15%'}/>
+    <TwinkleStar purple={true} top={'20px'} left={'45%'} width={'12px'} mdTop={'40%'} mdLft={'55%'}/>
+    <TwinkleStar bottom={'5%'} right={'20%'} width={'15px'} mdBtm={'20%'} mdLft={'50%'}/>
+
     {/*flares*/}
     <img
         src={flare}

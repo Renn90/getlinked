@@ -2,9 +2,9 @@ import React from "react";
 import illustration from "../assets/rules-section-image.png";
 import Header from "./UI/Header";
 import flare from "../assets/Purple-Lens-Flare.png";
-import star from "../assets/star.png";
 
 import Hr from "./UI/Hr";
+import TwinkleStar from "./UI/TwinkleStar";
 
 const Rules = () => {
   return (
@@ -21,11 +21,11 @@ const Rules = () => {
             alt="illustration"
             className="w-[664px] md:ml-[10%]"
           />
-         <img src={star} alt="star" className="absolute bottom-[10%] left-[0%] w-[15px]"/>
+         <TwinkleStar bottom={'10%'} left={'0%'} width={'15px'} />
         </div>
         <div className="w-1/2 relative w-[100%] mt-[58px] md:mt-[0px] md:ml-5">
         <Header head={'Rules and'} purpleTxt={'Guidelines'}/>
-          <img src={star} alt="star" className="absolute top-[10%] right-[50%] w-[15px] opacity-40"/>
+          <TwinkleStar top={'10%'} right={'50%'} width={'15px'} />
           <p className="text-sm leading-6">
             Our tech hackathon is a melting pot of visionaries, and its purpose
             is as clear as day: to shape the future. Whether you're a coding
