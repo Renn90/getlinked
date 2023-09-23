@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import heroImg from "../assets/heroImg.png";
+import heroImg from "../assets/heroImg.webp";
 import chain from "../assets/chain.svg";
 import curve from "../assets/curve.svg";
 import explode from "../assets/explode.svg";
 import Button from "./UI/Button";
 import idea from "../assets/idea.svg";
-import flare from "../assets/Purple-Lens-Flare.png";
-import flare2 from "../assets/Purple-Lens-Flare2.png";
-import metrix from "../assets/metrix.png";
+import flare from "../assets/Purple-Lens-Flare.webp";
+import flare2 from "../assets/Purple-Lens-Flare2.webp";
+import metrix from "../assets/metrix.webp";
 import Hr from "./UI/Hr";
 import TwinkleStar from "./UI/TwinkleStar";
 import AOS from "aos";

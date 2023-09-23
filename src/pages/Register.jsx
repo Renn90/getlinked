@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import register from "../assets/register.png";
+import register from "../assets/register.webp";
 import RegisterForm from "../components/RegisterForm";
 import PageFlaire from "../components/UI/PageFlaire";
 import SuccessModal from "../components/SuccessModal";

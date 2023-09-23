@@ -1,7 +1,5 @@
 import React from "react";
-import purple from "../../assets/purple star.png";
-import star from "../../assets/star.png";
-import flare from "../../assets/Purple-Lens-Flare.png";
+import flare from "../../assets/Purple-Lens-Flare.webp";
 import TwinkleStar from "./TwinkleStar";
 
 const PageFlaire = () => {

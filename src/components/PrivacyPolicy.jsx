@@ -2,9 +2,9 @@ import React from "react";
 import { FaCheck } from "react-icons/fa";
 import Header from "./UI/Header";
 import Button from "./UI/Button";
-import privacy from "../assets/privacy.png";
-import sheild from "../assets/sheild.png";
-import flare from "../assets/Purple-Lens-Flare.png";
+import privacy from "../assets/privacy.webp";
+import sheild from "../assets/sheild.webp";
+import flare from "../assets/Purple-Lens-Flare.webp";
 import TwinkleStar from "./UI/TwinkleStar";
 
 const PrivacyPolicy = () => {

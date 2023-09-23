@@ -1,7 +1,7 @@
 import React from "react";
-import illustration from "../assets/rules-section-image.png";
+import illustration from "../assets/rules-section-image.webp";
 import Header from "./UI/Header";
-import flare from "../assets/Purple-Lens-Flare.png";
+import flare from "../assets/Purple-Lens-Flare.webp";
 
 import Hr from "./UI/Hr";
 import TwinkleStar from "./UI/TwinkleStar";

@@ -1,5 +1,5 @@
 import React from "react";
-import illustration from "../assets/success.png";
+import illustration from "../assets/success.webp";
 import { Link } from "react-router-dom";
 const SuccessModal = () => {
   return (

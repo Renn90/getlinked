@@ -1,10 +1,8 @@
 import React from "react";
 import Header from "./UI/Header";
-import sponsor from "../assets/sponsors.png";
+import sponsor from "../assets/sponsors.webp";
 import Hr from "./UI/Hr";
-import flare from "../assets/Purple-Lens-Flare.png";
-import purple from "../assets/purple star.png";
-import star from "../assets/star.png";
+import flare from "../assets/Purple-Lens-Flare.webp";
 import TwinkleStar from "./UI/TwinkleStar";
 
 const Partners = () => {

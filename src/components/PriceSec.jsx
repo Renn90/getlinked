@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./UI/Header";
-import illustration from "../assets/priceIllustration.png";
-import rewards from "../assets/Rewards.png";
-import flare from "../assets/Purple-Lens-Flare.png";
+import illustration from "../assets/priceIllustration.webp";
+import rewards from "../assets/Rewards.webp";
+import flare from "../assets/Purple-Lens-Flare.webp";
 import TwinkleStar from "./UI/TwinkleStar";
 
 const PriceSec = () => {

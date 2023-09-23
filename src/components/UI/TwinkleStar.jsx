@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import star from "../../assets/star.png";
-import purplep from "../../assets/purple star.png";
+import star from "../../assets/star.webp";
+import purplep from "../../assets/purple star.webp";
 
 const TwinkleStar = () => {
   const [opacity, setOpacity] = useState(1);

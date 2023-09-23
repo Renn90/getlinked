@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "./UI/Header";
-import question from '../assets/question.png'
+import question from '../assets/question.webp'
 import Hr from "./UI/Hr";
 import TwinkleStar from "./UI/TwinkleStar";
 
