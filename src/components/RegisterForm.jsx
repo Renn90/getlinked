@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./UI/Header";
-
+import { useFetchCartegory } from "./FetchCartegory";
 const RegisterForm = ({ setSuccess }) => {
   const [teamsName, setTeamsName] = useState("");
   const [phone, setphone] = useState("");
@@ -15,7 +15,7 @@ const RegisterForm = ({ setSuccess }) => {
   );
 
   //fetched category state
-  const [fetchedcartegory, setFetchedCategory] = useState([]);
+  const fetchedcartegory = useFetchCartegory();
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -39,23 +39,6 @@ const RegisterForm = ({ setSuccess }) => {
     category: cartegory,
     privacy_policy_accepted: check,
   };
-
-  // fetch category
-  useEffect(() => {
-    const fetchCategory = async () => {
-      try {
-        const response = await fetch(
-          "https://backend.getlinked.ai/hackathon/categories-list"
-        );
-        const data = await response.json();
-        setFetchedCategory(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchCategory();
-  }, []);
 
   //send registeration details
   const sendDetails = async (e) => {
@@ -188,7 +171,11 @@ const RegisterForm = ({ setSuccess }) => {
               Select a Category
             </option>
             {fetchedcartegory.map((cartegory) => (
-              <option value={cartegory.id} className="bg-primary" key={cartegory.id}>
+              <option
+                value={cartegory.id}
+                className="bg-primary"
+                key={cartegory.id}
+              >
                 {cartegory.name}
               </option>
             ))}
