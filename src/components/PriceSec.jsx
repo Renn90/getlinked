@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./UI/Header";
-import illustration from '../assets/priceillustration.png'
+//import illustration from '../assets/priceillustration.png'
 import rewards from '../assets/Rewards.png'
 import flare from "../assets/Purple-Lens-Flare.png";
 import TwinkleStar from "./UI/TwinkleStar";
@@ -17,7 +17,7 @@ const PriceSec = () => {
       </div>
       <div className="flex flex-col justify-between items-center w-[100%] pt-12 md:flex-row">
         <span className="flex justify-center relative md:justify-start">
-        <img src={illustration} alt="price"className="w-[85%] z-[99]"/>
+        {/* <img src={illustration} alt="price"className="w-[85%] z-[99]"/> */}
         <TwinkleStar purple={true} top={'20%'} left={'45%'} width={'15px'} mdTop={'-10%'} mdLft={'15%'}/>
         <TwinkleStar right={'0%'} width={'15px'} mdBtm={'0%'} mdLft={'10%'}/>
         </span>
