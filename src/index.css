@@ -116,7 +116,12 @@ body{
   max-height: 0px;
 }
 
-.spinner {
+
+.spinner-big{
+  height: 100px!important;
+  width: 100px!important;
+}
+.spinner,.spinner-big {
   position: absolute;
   top: 20%;
   left: 40%;

@@ -27,7 +27,7 @@ const NavBar = () => {
           get<span className="text-secondary-2">linked</span>
         </h1>
         <ul className={`w-2/3 drop-down rounded-b overflow-hidden z-[998]  ${open && 'scroll-down'}`}>
-          <span className="justify-between items-center py-[80px] px-6 md:py-0 md:px-0 md:flex">
+          <span className="justify-between items-center py-[50px] px-6 md:py-0 md:px-0 md:flex">
          <li><NavLink to='/' className={({isActive})=> `text-[#D4D4D4] hover:text-white ${isActive && 'text-gradient'}`} onClick={closeHandler}>Timeline</NavLink></li>
          <li><NavLink to='' className="text-[#D4D4D4] hover:text-white" onClick={closeHandler}>Overview</NavLink></li>
          <li><NavLink to='' className="text-[#D4D4D4] hover:text-white" onClick={closeHandler}>FAQs</NavLink></li>

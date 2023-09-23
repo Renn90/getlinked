@@ -10,7 +10,9 @@ const RegisterForm = ({ setSuccess }) => {
   const [size, setSize] = useState("");
   const [check, setCheck] = useState(false);
 
-  const [errorMssg, setErrorMssg] = useState('Oops, something went wrong. Please try again later.')
+  const [errorMssg, setErrorMssg] = useState(
+    "Oops, something went wrong. Please try again later."
+  );
 
   //fetched category state
   const [fetchedcartegory, setFetchedCategory] = useState([]);
@@ -60,7 +62,7 @@ const RegisterForm = ({ setSuccess }) => {
     e.preventDefault();
     setTeamsName("");
     setphone("");
-    setEmail('')
+    setEmail("");
     setTopic("");
     setCartegory("");
     setSize("");
@@ -75,14 +77,14 @@ const RegisterForm = ({ setSuccess }) => {
         body: JSON.stringify(data),
       });
       const statusCode = res.ok;
-      const messg = await res.json()
+      const messg = await res.json();
 
-      if(messg.email[0] === "applicant with this email already exists.") {
-         setErrorMssg("applicant with this email already exists.")
+      if (messg.email[0] === "applicant with this email already exists.") {
+        setErrorMssg("applicant with this email already exists.");
       }
-      if (statusCode){
+      if (statusCode) {
         setSuccess(true);
-        setError(false)
+        setError(false);
       } else {
         setError(true);
       }
@@ -182,13 +184,13 @@ const RegisterForm = ({ setSuccess }) => {
             onChange={HandleCartegory}
             value={cartegory}
           >
-             <option value="" className="bg-primary">
-                  Select a Category
-                </option>
+            <option value="" className="bg-primary">
+              Select a Category
+            </option>
             {fetchedcartegory.map((cartegory) => (
-                <option value={cartegory.id} className="bg-primary">
-                  {cartegory.name}
-                </option>
+              <option value={cartegory.id} className="bg-primary" key={cartegory.id}>
+                {cartegory.name}
+              </option>
             ))}
           </select>
         </span>
@@ -224,17 +226,19 @@ const RegisterForm = ({ setSuccess }) => {
           I agreed with the event terms and conditions and privacy policy
         </p>
       </span>
-      <p className="text-[red] py-2">
-        {error && errorMssg }
-      </p>
+      <p className="text-[red] py-2">{error && errorMssg}</p>
       <button
         disabled={loading || !validForm ? true : false}
         className="relative gradient px-4 py-2 rounded w-[100%] disabled:opacity-10 disabled:cursor-none"
         onClick={sendDetails}
       >
-        {loading && <span className="spinner"></span>}
         Register Now
       </button>
+      {loading && (
+        <div className="absolute top-[0] h-[100%] w-[100%] bg-black/70 z-[99]">
+          <span className="spinner-big"></span>
+        </div>
+      )}
     </form>
   );
 };
