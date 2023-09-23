@@ -10,13 +10,32 @@ import flare2 from "../assets/Purple-Lens-Flare2.webp";
 import metrix from "../assets/metrix.webp";
 import Hr from "./UI/Hr";
 import TwinkleStar from "./UI/TwinkleStar";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+  });
+
+  const animationVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const zoomInVariant = {
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+    },
+  };
   const num = "text-4xl unicaOne mr-3";
   const smText = "text-xs";
-  AOS.init();
 
   const [text, setText] = useState("");
   const fullText = "Igniting a Revolution in HR Innovation";
@@ -73,10 +92,13 @@ const Hero = () => {
               alt="/"
               className="absolute top-0 left-0 w-[50%] opacity-50"
             />
-            <h1
+            <motion.h1
               className="text-3xl font-bold relative text-clash z-[99] md:text-5xl"
-              data-aos="fade-right"
-              data-aos-duration="1000"
+              ref={ref}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={animationVariants}
+              transition={{ duration: 0.5 }}
             >
               <img
                 src={idea}
@@ -88,16 +110,30 @@ const Hero = () => {
                 <img src={chain} alt="chain" className="w-[35px]" />
                 <img src={explode} alt="ex" className="w-[35px]" />
               </span>
-            </h1>
-            <p
-              className="text-white text-sm py-[4px] duration-150"
-              data-aos="fade-right"
-              data-aos-duration="1000"
+            </motion.h1>
+            <motion.p
+              className="relative text-white text-sm py-[4px]"
+              ref={ref}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={animationVariants}
+              transition={{ duration: 0.5 }}
             >
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize
-            </p>
-            <Button cta="Register" />
+            </motion.p>
+            <motion.span
+              className="m-0 z-[999]"
+              ref={ref}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={animationVariants}
+              transition={{ duration: 0.5 }}
+            >
+              <Link to="/register">
+                <Button cta="Register" />
+              </Link>
+            </motion.span>
             <div className="flex">
               <h1 className={num}>
                 00<span className={smText}>H</span>
@@ -117,11 +153,14 @@ const Hero = () => {
               className="absolute top-[5%] right-0 w-[60%] opacity-50"
             />
             <img src={metrix} alt="/" className="absolute right-0 w-[50%]" />
-            <img
+            <motion.img
               src={heroImg}
               className="w-[500px]"
-              data-aos="zoom-in"
-              data-aos-duration="1000"
+              ref={ref}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={zoomInVariant}
+              transition={{ duration: 0.5 }}
             />
           </div>
         </div>
