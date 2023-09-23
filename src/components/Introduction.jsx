@@ -21,13 +21,13 @@ const Introduction = () => {
         </div>
         <img src={arrow} alt="arrow" className="absolute bottom-[-30px] right-[40%] md:bottom-[10px] md:right-[20%]"/>
         <span className="absolute top-[20%] left-[0%] w-[15px] z-[9]">
-            <TwinkleStar purple={true}/>
+            <TwinkleStar />
           </span>
       </div>
       <div className="w-1/2 relative w-[100%] mt-[58px] md:mt-[0px] md:ml-5">
         <Header head={'Introduction to getlinked'} purpleTxt={'tech Hackathon 1.0'}/>
         <span className="absolute top-[10%] right-[0%] w-[15px] z-[9]">
-            <TwinkleStar purple={true}/>
+            <TwinkleStar />
           </span>
         <p className="text-sm leading-6" >
           Our tech hackathon is a melting pot of visionaries, and its purpose is

@@ -16,9 +16,13 @@ const Criteria = () => {
       />
     <div className="container overflow-hidden relative mx-auto flex flex-col items-center text-white py-[60px] md:flex-row">
       <div className="w-[100%] md:w-1/2">
-        <TwinkleStar purple={true} top={'20px'} left={'45%'} mdTop={'10%'} mdLft={'15%'} />
+        <span className="absolute top-[20%] left-[45%] w-[15px] z-[9] md:top-[10%] md:left-[15%]">
+            <TwinkleStar />
+          </span>
         <img src={illustration} alt="/" />
-        <TwinkleStar bottom={'5%'} right={'20%'} width={'15px'} mdBtm={'10%'} mdRight={'60%'}/>
+        <span className="absolute bottom-[5%] right-[20%] w-[15px] z-[9] md:bottom-[10%] md:right-[60%]">
+            <TwinkleStar />
+          </span>
       </div>
       <div className="w-[100%] md:w-1/2">
         <Header head={"Judging Criteria"} purpleTxt={"Key attributes"} />

@@ -64,9 +64,15 @@ const Timeline = () => {
         no="6"
         reverse={true}
       />
-      <TwinkleStar purple={true} top={'5%'} left={'10%'} width={'15px'}/>
-        <TwinkleStar bottom={'5%'} left={'10%'} width={'15px'} mdBtm={'10%'}/>
-      <TwinkleStar bottom={'50%'} right={'10%'} width={'15px'} />
+      <span className="absolute top-[5%] left-[10%] w-[15px] z-[9]">
+        <TwinkleStar />
+      </span>
+      <span className="absolute bottom-[5%] left-[10%] w-[15px] z-[9]">
+        <TwinkleStar />
+      </span>
+      <span className="absolute bottom-[50%] right-[10%] w-[15px] z-[9]">
+        <TwinkleStar />
+      </span>
     </section>
   );
 };

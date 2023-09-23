@@ -5,7 +5,7 @@ import flare from "../assets/Purple-Lens-Flare.png";
 
 import Hr from "./UI/Hr";
 import TwinkleStar from "./UI/TwinkleStar";
-
+ 
 const Rules = () => {
   return (
     <section className="relative">
@@ -21,11 +21,15 @@ const Rules = () => {
             alt="illustration"
             className="w-[664px] md:ml-[10%]"
           />
-         <TwinkleStar bottom={'10%'} left={'0%'} width={'15px'} />
+         <span className="absolute bottom-[15%] left-[0%] w-[15px] z-[9]">
+            <TwinkleStar purple={true}/>
+          </span>
         </div>
         <div className="w-1/2 relative w-[100%] mt-[58px] md:mt-[0px] md:ml-5">
         <Header head={'Rules and'} purpleTxt={'Guidelines'}/>
-          <TwinkleStar top={'10%'} right={'50%'} width={'15px'} />
+          <span className="absolute top-[10%] right-[50%] w-[15px] z-[9]">
+            <TwinkleStar purple={true}/>
+          </span>
           <p className="text-sm leading-6">
             Our tech hackathon is a melting pot of visionaries, and its purpose
             is as clear as day: to shape the future. Whether you're a coding

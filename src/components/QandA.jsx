@@ -17,7 +17,9 @@ const QandA = () => {
   return (
     <>
     <section className="container relative mx-auto text-white flex flex-col items-center justify-between py-[30px] w-[100%] md:flex-row">
-      <TwinkleStar purple={true} top={'5%'} left={'0%'} width={'15px'} mdTop={'5%'}/>
+      <span className="absolute top-[5%] left-[0%] w-[15px] z-[9] md:top-[5%]">
+            <TwinkleStar />
+          </span>
       <div className="w-[100%] md:w-1/2">
         <span className="text-center md:text-start">
         <Header head={"Frequently Asked"} purpleTxt={"Questions"} />
@@ -95,10 +97,18 @@ const QandA = () => {
       </div>
       <div className="w-[100%] flex justify-end md:w-1/2 relative">
         <img src={question} alt="question" className="my-6 md:my-0 md:w-[90%] md:block"/>
-        <TwinkleStar purple={true} top={'10%'} left={'45%'} width={'15px'} />
-        <TwinkleStar purple={true} bottom={'30%'} left={'10%'} width={'15px'} />
-        <TwinkleStar bottom={'50%'} left={'20%'} width={'15px'} />
-        <TwinkleStar bottom={'5%'} right={'0%'} width={'15px'} />
+        <span className="absolute top-[10%] left-[45%] w-[15px] z-[9]">
+            <TwinkleStar />
+          </span>
+        <span className="absolute bottom-[30%] left-[10%] w-[15px] z-[9]">
+            <TwinkleStar />
+          </span>
+        <span className="absolute bottom-[50%] left-[20%] w-[15px] z-[9]">
+            <TwinkleStar />
+          </span>
+        <span className="absolute bottom-[5%] right-[0%] w-[15px] z-[9]">
+            <TwinkleStar />
+          </span>
       </div>
     </section>
     <Hr />

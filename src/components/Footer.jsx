@@ -30,8 +30,12 @@ const Footer = () => {
               <h3 className="cursor-pointer">Privacy Policy</h3>
             </span>
             {/* random stars*/}
-        <TwinkleStar purple={true} bottom={'10%'} right={'10%'} width={'17px'} />
-        <TwinkleStar top={'0%'} left={'-10%'} width={'15px'} />
+        <span className="absolute bottom-[10%] right-[10%] w-[17px] z-[9]">
+            <TwinkleStar />
+          </span>
+        <span className="absolute top-[0%] left-[-10%] w-[15px] z-[9]">
+            <TwinkleStar />
+          </span>
           </div>
           <div className="text-sm flex flex-col justify-between mb-[39px] md:w-1/4 md:mb-0">
             <h2 className="text-secondary-2 font-bold">Useful Links</h2>
@@ -56,8 +60,12 @@ const Footer = () => {
               <FaLocationDot className="mr-2" />
               27,Alara Street Yaba 100012 Lagos State
             </span>
-         <TwinkleStar top={'0%'} left={'-10%'} width={'15px'} />
-         <TwinkleStar bottom={'-5%'} right={'10%'} width={'12px'} />
+         <span className="absolute top-[0%] left-[-10%] w-[15px] z-[9]">
+            <TwinkleStar />
+          </span>
+         <span className="absolute bottom-[-5%] right-[10%] w-[12px] z-[9]">
+            <TwinkleStar />
+          </span>
           </div>
         </div>
         <p className="text-center mt-[30px] text-xs">

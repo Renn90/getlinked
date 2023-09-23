@@ -68,9 +68,15 @@ const PrivacyPolicy = () => {
           </span>
         </div>
         {/*random stars */}
-          <TwinkleStar purple={true} top={'10%'} right={'0%'} width={'17px'} />
-        <TwinkleStar purple={true} bottom={'10%'} left={'0%'} width={'17px'} mdLft={'-50%'} />
-         <TwinkleStar purple={true} top={'-5%'} left={'0%'} width={'15px'} />
+          <span className="absolute top-[10%] right-[0%] w-[17px] z-[9]">
+            <TwinkleStar />
+          </span>
+          <span className="absolute bottom-[10%] left-[0%] w-[17px] z-[9] md:left-[50%]">
+            <TwinkleStar />
+          </span>
+         <span className="absolute top-[-5%] left-[0%] w-[15px] z-[9]">
+            <TwinkleStar />
+          </span>
 
                {/* purple flare */}
       <img
@@ -88,10 +94,18 @@ const PrivacyPolicy = () => {
           className="absolute top-[0%] right-20% w-[70%] md:right-0 md:top-[-10%]"
         />
         {/*random stars */}
-         <TwinkleStar purple={true} bottom={'40%'} left={'30%'} width={'17px'} />
-          <TwinkleStar  bottom={'0%'} right={'0%'} width={'15px'} />
-        <TwinkleStar top={'5%'} right={'20%'} width={'15px'} />
-         <TwinkleStar bottom={'15%'} left={'0%'} width={'15px'} />
+         <span className="absolute bottom-[40%] left-[30%] w-[17px] z-[9]">
+            <TwinkleStar />
+          </span>
+          <span className="absolute bottom-[0%] right-[0%] w-[15px] z-[9]">
+            <TwinkleStar />
+          </span>
+        <span className="absolute top-[5%] right-[20%] w-[15px] z-[9]">
+            <TwinkleStar />
+          </span>
+         <span className="absolute bottom-[15%] left-[0%] w-[15px] z-[9]">
+            <TwinkleStar />
+          </span>
       </div>
     </div>
     </section>
