@@ -3,9 +3,17 @@ import Header from "./UI/Header";
 import question from '../assets/question.webp'
 import Hr from "./UI/Hr";
 import TwinkleStar from "./UI/TwinkleStar";
+import { zoomInVariant } from "./UI/Animations";
+import { animationVariants } from "./UI/Animations";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const QandA = () => {
   const [display, setDisplay] = useState(null);
+
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+  });
 
   const changeDisplay = (index) => {
     setDisplay(index === display ? null : index);
@@ -20,7 +28,13 @@ const QandA = () => {
       <span className="absolute top-[5%] left-[0%] w-[15px] z-[9] md:top-[5%]">
             <TwinkleStar />
           </span>
-      <div className="w-[100%] md:w-1/2">
+      <motion.div
+       ref={ref}
+       initial="hidden"
+       animate={inView ? "visible" : "hidden"}
+       variants={animationVariants}
+       transition={{ duration: 0.7 }}
+      className="w-[100%] md:w-1/2">
         <span className="text-center md:text-start">
         <Header head={"Frequently Asked"} purpleTxt={"Questions"} />
         <p>
@@ -94,9 +108,15 @@ const QandA = () => {
 
         </div>
         
-      </div>
+      </motion.div>
       <div className="w-[100%] flex justify-end md:w-1/2 relative">
-        <img src={question} alt="question" className="my-6 md:my-0 md:w-[90%] md:block"/>
+        <motion.img
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={zoomInVariant}
+        transition={{ duration: 0.5 }}
+        src={question} alt="question" className="my-6 md:my-0 md:w-[90%] md:block"/>
         <span className="absolute top-[10%] left-[45%] w-[15px] z-[9]">
             <TwinkleStar />
           </span>

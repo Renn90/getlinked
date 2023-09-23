@@ -4,6 +4,8 @@ import arrow from "../assets/arrow.webp";
 import Hr from "./UI/Hr";
 import Header from "./UI/Header";
 import TwinkleStar from "./UI/TwinkleStar";
+import { zoomInVariant } from "./UI/Animations";
+import { animationVariants } from "./UI/Animations";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -11,22 +13,6 @@ const Introduction = () => {
   const [ref, inView] = useInView({
     triggerOnce: false,
   });
-
-  const animationVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const zoomInVariant = {
-    hidden: {
-      opacity: 0,
-      scale: 0.8,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-    },
-  };
 
   return (
     <>
