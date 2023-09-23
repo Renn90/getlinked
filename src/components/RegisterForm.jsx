@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./UI/Header";
 
-const RegisterForm = ({setSuccess}) => {
+const RegisterForm = ({ setSuccess }) => {
   const [teamsName, setTeamsName] = useState("");
   const [phone, setphone] = useState("");
   const [email, setEmail] = useState("");
@@ -9,6 +9,11 @@ const RegisterForm = ({setSuccess}) => {
   const [cartegory, setCartegory] = useState("");
   const [size, setSize] = useState("");
   const [check, setCheck] = useState(false);
+
+  const [errorMssg, setErrorMssg] = useState('Oops, something went wrong. Please try again later.')
+
+  //fetched category state
+  const [fetchedcartegory, setFetchedCategory] = useState([]);
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -24,20 +29,38 @@ const RegisterForm = ({setSuccess}) => {
 
   const fetch_url = "https://backend.getlinked.ai/hackathon/registration";
   const data = {
-    "email":email,
-    "phone_number":phone,
-    "team_name": teamsName,
-    "group_size": size,
-    "project_topic":topic,
-    "category": cartegory,
-    "privacy_policy_accepted": check
+    email: email,
+    phone_number: phone,
+    team_name: teamsName,
+    group_size: size,
+    project_topic: topic,
+    category: cartegory,
+    privacy_policy_accepted: check,
   };
+
+  // fetch category
+  useEffect(() => {
+    const fetchCategory = async () => {
+      try {
+        const response = await fetch(
+          "https://backend.getlinked.ai/hackathon/categories-list"
+        );
+        const data = await response.json();
+        setFetchedCategory(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchCategory();
+  }, []);
 
   //send registeration details
   const sendDetails = async (e) => {
     e.preventDefault();
     setTeamsName("");
     setphone("");
+    setEmail('')
     setTopic("");
     setCartegory("");
     setSize("");
@@ -52,9 +75,14 @@ const RegisterForm = ({setSuccess}) => {
         body: JSON.stringify(data),
       });
       const statusCode = res.ok;
-      console.log(res.body);
-      if (statusCode) {
+      const messg = await res.json()
+
+      if(messg.email[0] === "applicant with this email already exists.") {
+         setErrorMssg("applicant with this email already exists.")
+      }
+      if (statusCode){
         setSuccess(true);
+        setError(false)
       } else {
         setError(true);
       }
@@ -70,32 +98,24 @@ const RegisterForm = ({setSuccess}) => {
   //Get & Handle the values from each input
   const HandleTeamName = (e) => {
     setTeamsName(e.target.value);
-    console.log(teamsName);
   };
   const HandlePhone = (e) => {
     setphone(e.target.value);
-    console.log(phone);
   };
   const HandleEmail = (e) => {
     setEmail(e.target.value);
-    console.log(email);
   };
   const HandleTopic = (e) => {
     setTopic(e.target.value);
-    console.log(topic);
   };
   const HandleCartegory = (e) => {
     setCartegory(e.target.value);
-    console.log(cartegory);
   };
   const HandleSize = (e) => {
     setSize(e.target.value);
-    console.log(size);
   };
-
   const HandleCheck = (e) => {
     setCheck(e.target.checked);
-    console.log(check);
   };
 
   const labelForm = "flex flex-col w-[100%]";
@@ -157,29 +177,26 @@ const RegisterForm = ({setSuccess}) => {
       <div className="flex justify-between w-[100%]">
         <span className={labelForm}>
           <label>Cartegory</label>
-          <select className={input} onChange={HandleCartegory} value={cartegory}>
-            <option value="" className="bg-primary">
-              Select a Category
-            </option>
-            <option value="MOBILE" className="bg-primary">
-              MOBILE
-            </option>
-            <option value="WEB" className="bg-primary">
-              WEB
-            </option>
-            <option
-              value="UI/UX"
-              className="bg-primary"
-            >
-             UI/UX
-            </option>
+          <select
+            className={input}
+            onChange={HandleCartegory}
+            value={cartegory}
+          >
+             <option value="" className="bg-primary">
+                  Select a Category
+                </option>
+            {fetchedcartegory.map((cartegory) => (
+                <option value={cartegory.id} className="bg-primary">
+                  {cartegory.name}
+                </option>
+            ))}
           </select>
         </span>
         <span className={labelForm}>
           <label>Group size</label>
           <select className={input} onChange={HandleSize} value={size}>
             <option value="" className="bg-primary">
-              Select a Category
+              select
             </option>
             <option value="2" className="bg-primary">
               2
@@ -201,14 +218,21 @@ const RegisterForm = ({setSuccess}) => {
           type="checkbox"
           className="rounded mr-2 outline-0"
           onChange={HandleCheck}
+          checked={check}
         />
         <p className="text-xs">
           I agreed with the event terms and conditions and privacy policy
         </p>
       </span>
-      <p className="text-[red] py-2">{error && 'Ran into an error, check input & try again'}</p>
-      <button disabled={loading || !validForm ? true : false} className="gradient px-4 py-2 rounded w-[100%] disabled:opacity-10 disabled:cursor-none" onClick={sendDetails}>
-      {loading && <span className="spinner"></span>}
+      <p className="text-[red] py-2">
+        {error && errorMssg }
+      </p>
+      <button
+        disabled={loading || !validForm ? true : false}
+        className="relative gradient px-4 py-2 rounded w-[100%] disabled:opacity-10 disabled:cursor-none"
+        onClick={sendDetails}
+      >
+        {loading && <span className="spinner"></span>}
         Register Now
       </button>
     </form>
