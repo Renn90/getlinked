@@ -138,5 +138,5 @@ body{
 }
 
 .twinkle{
-  transition: opacity;
+  transition: .2s;
 }

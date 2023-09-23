@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import heroImg from "../assets/heroImg.png";
 import chain from "../assets/chain.svg";
 import curve from "../assets/curve.svg";
@@ -10,35 +10,74 @@ import flare2 from "../assets/Purple-Lens-Flare2.png";
 import metrix from "../assets/metrix.png";
 import Hr from "./UI/Hr";
 import TwinkleStar from "./UI/TwinkleStar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
   const num = "text-4xl unicaOne mr-3";
   const smText = "text-xs";
-  
+  AOS.init();
+
+  const [text, setText] = useState("");
+  const fullText = "Igniting a Revolution in HR Innovation";
+
+  useEffect(() => {
+    const typeText = (index) => {
+      if (index <= fullText.length) {
+        setText(fullText.slice(0, index));
+        setTimeout(() => typeText(index + 1), 100); // Typing speed
+      } else {
+        setTimeout(() => eraseText(fullText.length), 1000); // Delay before erasing
+      }
+    };
+
+    const eraseText = (index) => {
+      if (index >= 0) {
+        setText(fullText.slice(0, index));
+        setTimeout(() => eraseText(index - 1), 100); // Erasing speed
+      } else {
+        setTimeout(() => typeText(0), 1000); // Delay before typing again
+      }
+    };
+
+    typeText(0);
+    return () => {
+      clearTimeout();
+    };
+  }, [fullText]);
+
   return (
     <>
       <Hr />
       <header className="container mx-auto flex flex-col mt-8 md:mt-4">
         <span className="flex flex-col text-white self-end">
-          <i className="font-bold md:text-xl">
-            Igniting a Revolution in HR Innovation
-          </i>
-          <img
-            src={curve}
-            className="self-end w-[160px] mb-[30px]"
-          />
+          <i className="font-bold md:text-xl h-[30px]">{text}</i>
+          <img src={curve} className="self-end w-[160px] mb-[30px]" />
         </span>
         <div className="flex flex-col justify-between items-center text-center text-white mt-[80px] md:text-start md:flex-row md:mt-0">
-          <TwinkleStar top={'20%'} left={'10%'} width={'10px'} mdLft={'12%'} />
-          <TwinkleStar top={'30%'} left={'40%'} width={'15px'} />
-          <TwinkleStar bottom={'20%'} left={'30%'} width={'15px'} />
-          <div style={{ lineHeight: "80px" }} className="flex flex-col items-center md:items-start">
+          <span className="absolute top-[20%] left-[10%] w-[15px] z-[9999]">
+            <TwinkleStar />
+          </span>
+          <span className="absolute top-[30%] left-[40%] w-[15px] z-[9]">
+            <TwinkleStar />
+          </span>
+          <span className="absolute bottom-[20%] left-[30%] w-[15px] z-[9]">
+            <TwinkleStar />
+          </span>
+          <div
+            style={{ lineHeight: "80px" }}
+            className="flex flex-col items-center md:items-start"
+          >
             <img
               src={flare}
               alt="/"
               className="absolute top-0 left-0 w-[50%] opacity-50"
             />
-            <h1 className="text-3xl font-bold relative text-clash z-[99] md:text-5xl">
+            <h1
+              className="text-3xl font-bold relative text-clash z-[99] md:text-5xl"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <img
                 src={idea}
                 className="w-[15px] absolute right-[15%] top-[-18px] md:top-[-38px] md:w-[35px]"
@@ -50,7 +89,11 @@ const Hero = () => {
                 <img src={explode} alt="ex" className="w-[35px]" />
               </span>
             </h1>
-            <p className="text-white text-sm py-[4px]">
+            <p
+              className="text-white text-sm py-[4px] duration-150"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize
             </p>
@@ -74,11 +117,16 @@ const Hero = () => {
               className="absolute top-[5%] right-0 w-[60%] opacity-50"
             />
             <img src={metrix} alt="/" className="absolute right-0 w-[50%]" />
-            <img src={heroImg} className="w-[500px]" />
+            <img
+              src={heroImg}
+              className="w-[500px]"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            />
           </div>
         </div>
       </header>
-    <Hr />
+      <Hr />
     </>
   );
 };

@@ -30,7 +30,7 @@ const RegisterForm = ({setSuccess}) => {
     "group_size": size,
     "project_topic":topic,
     "category": cartegory,
-    "privacy_poclicy_accepted": check
+    "privacy_policy_accepted": check
   };
 
   //send registeration details
@@ -52,7 +52,7 @@ const RegisterForm = ({setSuccess}) => {
         body: JSON.stringify(data),
       });
       const statusCode = res.ok;
-      console.log(res);
+      console.log(res.body);
       if (statusCode) {
         setSuccess(true);
       } else {
@@ -161,17 +161,17 @@ const RegisterForm = ({setSuccess}) => {
             <option value="" className="bg-primary">
               Select a Category
             </option>
-            <option value="Innovation" className="bg-primary">
-              Innovation
+            <option value="MOBILE" className="bg-primary">
+              MOBILE
             </option>
-            <option value="AI and Machine Learning" className="bg-primary">
-              AI and Machine Learning
+            <option value="WEB" className="bg-primary">
+              WEB
             </option>
             <option
-              value="Blockchain and Cryptocurrency"
+              value="UI/UX"
               className="bg-primary"
             >
-              Web3 and Blockchain
+             UI/UX
             </option>
           </select>
         </span>

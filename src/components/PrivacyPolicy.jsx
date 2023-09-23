@@ -69,7 +69,7 @@ const PrivacyPolicy = () => {
         </div>
         {/*random stars */}
           <TwinkleStar purple={true} top={'10%'} right={'0%'} width={'17px'} />
-        <TwinkleStar purple={true} bottom={'10%'} left={'0%'} width={'17px'} mdLft={'-20%'} />
+        <TwinkleStar purple={true} bottom={'10%'} left={'0%'} width={'17px'} mdLft={'-50%'} />
          <TwinkleStar purple={true} top={'-5%'} left={'0%'} width={'15px'} />
 
                {/* purple flare */}

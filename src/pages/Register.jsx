@@ -6,7 +6,7 @@ import SuccessModal from "../components/SuccessModal";
 
 
 const Register = () => {
-  const [success, setSuccess] = useState(true)
+  const [success, setSuccess] = useState(false)
   return (
     <div className="absolute top-0 left-0 bg-primary flex flex-col justify-center p-4 w-[100%]  items-center md:static md:flex-row z-[999]">
       {success && <SuccessModal />}

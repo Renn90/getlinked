@@ -9,6 +9,7 @@ import PriceSec from '../components/PriceSec'
 import Partners from '../components/Partners'
 import PrivacyPolicy from '../components/PrivacyPolicy'
 import Footer from '../components/Footer'
+import TwinkleStar from '../components/UI/TwinkleStar'
 
 const HomePage = () => {
   return (
