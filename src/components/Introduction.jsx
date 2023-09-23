@@ -16,15 +16,14 @@ const Introduction = () => {
 
   return (
     <>
-      <section className="container relative mx-auto flex flex-col justify-between items-center text-white py-[30px] md:flex-row">
+      <section ref={ref} className="container relative mx-auto flex flex-col justify-between items-center text-white py-[30px] md:flex-row">
         <div className="w-1/2 relative w-[100%] flex items-center md:items-start">
           <div>
             <motion.img
-              ref={ref}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={zoomInVariant}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3}}
               src={illustration}
               alt="illustration"
               className="w-[400px]"
@@ -44,7 +43,7 @@ const Introduction = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={animationVariants}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           className="w-1/2 relative w-[100%] mt-[58px] md:mt-[0px] md:ml-5"
         >
           <Header

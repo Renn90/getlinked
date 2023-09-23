@@ -28,12 +28,7 @@ const QandA = () => {
       <span className="absolute top-[5%] left-[0%] w-[15px] z-[9] md:top-[5%]">
             <TwinkleStar />
           </span>
-      <motion.div
-       ref={ref}
-       initial="hidden"
-       animate={inView ? "visible" : "hidden"}
-       variants={animationVariants}
-       transition={{ duration: 0.7 }}
+      <div
       className="w-[100%] md:w-1/2">
         <span className="text-center md:text-start">
         <Header head={"Frequently Asked"} purpleTxt={"Questions"} />
@@ -108,7 +103,7 @@ const QandA = () => {
 
         </div>
         
-      </motion.div>
+      </div>
       <div className="w-[100%] flex justify-end md:w-1/2 relative">
         <motion.img
         ref={ref}

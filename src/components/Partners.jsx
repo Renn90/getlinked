@@ -16,11 +16,10 @@ const Partners = () => {
 
   return (
     <section className="relative">
-      <div className="container mx-auto text-white py-[30px] mt-[90px] my-8">
+      <div className="container mx-auto text-white py-[30px] mt-[90px] my-8" ref={ref}>
         <div className="text-center">
           <Header head={"Partners and sponsors"} />
           <motion.p
-            ref={ref}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={animationVariants}
@@ -36,7 +35,7 @@ const Partners = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={zoomInVariant}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3 }}
         className="flex flex-col items-center border border-1 rounded border-secondary-2 mt-[65px]">
           <img
             src={sponsor}

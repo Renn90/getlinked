@@ -16,11 +16,10 @@ const PriceSec = () => {
 
   return (
     <section className="relative">
-      <div className="container mx-auto text-white flex flex-col py-[30px] md:mt-4">
+      <div className="container mx-auto text-white flex flex-col py-[30px] md:mt-4 " ref={ref}>
         <div className="self-end text-center md:text-start">
           <Header head={"Prizes and"} purpleTxt={"Rewards"} />
           <motion.p
-           ref={ref}
            initial="hidden"
            animate={inView ? "visible" : "hidden"}
            variants={animationVariants}
@@ -32,11 +31,10 @@ const PriceSec = () => {
         <div className="flex flex-col justify-between items-center w-[100%] pt-12 md:flex-row">
           <span className="flex justify-center relative md:justify-start">
             <motion.img 
-            ref={ref}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={zoomInVariant}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.2 }}
             src={illustration} alt="price" className="w-[85%] z-[99]" />
             <span className="absolute top-[20%] left-[45%] w-[15px] z-[9] md:top-[-10%] md:left-[15%]">
               <TwinkleStar />
@@ -47,11 +45,10 @@ const PriceSec = () => {
           </span>
           <span className="flex justify-center relative md:justify-end">
             <motion.img
-            ref={ref}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={zoomInVariant}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.2 }}
               src={rewards}
               alt="rewards"
               className="mt-[51px] w-[85%] md:mt-0 z-[99]"

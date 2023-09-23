@@ -32,18 +32,17 @@ const Rules = () => {
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={zoomInVariant}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
           />
           <span className="absolute bottom-[15%] left-[0%] w-[15px] z-[9]">
             <TwinkleStar purple={true} />
           </span>
         </div>
         <motion.div
-          ref={ref}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={animationVariants}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.6 }}
           className="w-1/2 relative w-[100%] mt-[58px] md:mt-[0px] md:ml-5"
         >
           <Header head={"Rules and"} purpleTxt={"Guidelines"} />

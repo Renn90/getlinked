@@ -16,7 +16,7 @@ const Criteria = () => {
   });
 
   return (
-    <section className="relative">
+    <section className="relative" ref={ref}>
       <img
         src={flare}
         alt="/"
@@ -30,7 +30,6 @@ const Criteria = () => {
           <motion.img
             src={illustration}
             alt="/"
-            ref={ref}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={zoomInVariant}
@@ -41,42 +40,21 @@ const Criteria = () => {
         </div>
         <div className="w-[100%] md:w-1/2">
           <Header head={"Judging Criteria"} purpleTxt={"Key attributes"} />
-          <motion.p
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={animationVariants}
-            transition={{ duration: 0.6 }}
-            className="text-sm leading-6 my-4"
-          >
+          <p initial="hidden" className="text-sm leading-6 my-4">
             <span className="text-secondary-2 font-bold">
               Innovation and Creativity:{" "}
             </span>
             Evaluate the uniqueness and creativity of the solution. Consider
             whether it addresses a real-world problem in a novel way or
             introduces innovative features.
-          </motion.p>
-          <motion.p
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={animationVariants}
-            transition={{ duration: 0.4}}
-            className="text-sm leading-6 my-4"
-          >
+          </p>
+          <p className="text-sm leading-6 my-4">
             <span className="text-secondary-2 font-bold">Functionality: </span>
             Assess how well the solution works. Does it perform its intended
             functions effectively and without major issues? Judges would
             consider the completeness and robustness of the solution.
-          </motion.p>
-          <motion.p
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={animationVariants}
-            transition={{ duration: 0.6}}
-            className="text-sm leading-6 my-4"
-          >
+          </p>
+          <p className="text-sm leading-6 my-4">
             <span className="text-secondary-2 font-bold">
               Impact and Relevance:{" "}
             </span>
@@ -84,37 +62,23 @@ const Criteria = () => {
             Does it address a significant problem, and is it relevant to the
             target audience? Judges would assess the potential social, economic,
             or environmental benefits.
-          </motion.p>
-          <motion.p
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={animationVariants}
-            transition={{ duration: 0.7}}
-            className="text-sm leading-6 my-4"
-          >
+          </p>
+          <p transition={{ duration: 0.7 }} className="text-sm leading-6 my-4">
             <span className="text-secondary-2 font-bold">
               Technical Complexity:{" "}
             </span>
             Evaluate the technical sophistication of the solution. Judges would
             consider the complexity of the code, the use of advanced
             technologies or algorithms, and the scalability of the solution.:
-          </motion.p>
-          <motion.p
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={animationVariants}
-            transition={{ duration: 0.9}}
-            className="text-sm leading-6 my-4"
-          >
+          </p>
+          <p className="text-sm leading-6 my-4">
             <span className="text-secondary-2 font-bold">
               Adherence to Hackathon Rules:{" "}
             </span>
             Judges will Ensure that the team adhered to the rules and guidelines
             of the hackathon, including deadlines, use of specific technologies
             or APIs, and any other competition-specific requirements.
-          </motion.p>
+          </p>
           <Button cta={"Read More"} />
         </div>
       </div>

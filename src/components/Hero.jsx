@@ -160,7 +160,7 @@ const Hero = () => {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={zoomInVariant}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3}}
             />
           </div>
         </div>
