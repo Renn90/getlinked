@@ -2,6 +2,7 @@ import React from 'react'
 
 const TimelineItem = ({event, info, date,  no, reverse}) => {
   return (
+    <>
     <div className={`relative flex flex-col justify-between items-start my-4 sm:mb-2  sm:py-0 sm:my-0 sm:items-end  ${reverse ? 'sm:flex-row-reverse' : 'sm:flex-row'}`}>
         <span className={`text-start ml-10 sm:ml-0 sm:w-1/3`}>
           <h1 className={`font-bold text-secondary-2 sm:text-${!reverse ? 'end' : 'start'}`}>{event}</h1>
@@ -14,12 +15,12 @@ const TimelineItem = ({event, info, date,  no, reverse}) => {
           <span className="rounded-full gradient p-4 w-[5px] h-[5px] flex justify-center items-center font-bold">
            {no}
           </span>
-        </div>
+        </div> 
         <h1 className={`flex justify-start ml-10 sm:justify-${!reverse ? 'start' : 'end'} font-bold text-secondary-2 sm:ml-0 sm:w-1/3`}>
           {date}
         </h1>
       </div>
+      </>
   )
 }
-
 export default TimelineItem
